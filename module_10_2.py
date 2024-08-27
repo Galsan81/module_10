@@ -17,9 +17,10 @@ class Knight(Thread):
             n = n - self.power
             sleep(1)
             tn = time()
-            print(f'{self.name} сражается {round(tn-ts)} дней, осталось {n} воинов')
+            print(f'{self.name} сражается {round(tn-ts)} дней, осталось {n} воинов \n')
         tk = time()
-        return f'{self.name} одержал победу спустя {round(tk-tn)} дней(дня)'
+        print(f'{self.name} одержал победу спустя {round(tk-ts)} дней(дня)')
+        return '''f'{self.name} одержал победу спустя {round(tk-tn)} дней(дня)'''''
 
 first_knight = Knight('Sir Lancelot', 10)
 second_knight = Knight("Sir Galahad", 20)
@@ -29,4 +30,4 @@ second_knight.start()
 first_knight.join()
 second_knight.join()
 
-print('Все битвы закончились')
+print('Все битвы закончились!')
